@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>my website</title>
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src=""></script>
+</head>
+<body>
+
+<div class="wrapper">
+		<h2>Login Form</h2>
+	<div class="form-container">
+		<form action="{% url 'loginTask' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+    <div class="input-name">
+		<i class="fa fa-address-book email"></i>
+         <input type="text" placeholder="username" required class="text-name" name="email">
+     </div>
+
+
+    <div class="input-name">
+    	<i class='fa fa-lock email'></i>
+    	<input type="Password" placeholder="Password" required class="text-name" name="pass1">
+    </div>
+
+    <div class="input-name">
+    	<input type="submit" class="button" value="Login" class="text-name">	
+    </div>
+	 
+	 <div class="input-name">
+   <label>Don't have an account?</label>
+    <a href="{% url 'register' %}"> SignUP</a>
+</div>
+	</form>	
+	</div>
+</div>
+
+</body>
+</html>
+{% endblock %}

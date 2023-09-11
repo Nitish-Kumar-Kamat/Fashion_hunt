@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    #tbody{
+        background-color: whitesmoke;
+        }
+        img{
+            padding: 30px;
+            width: 100%;
+            margin-left: 10px;
+            
+        }
+        .para{
+            text-align: justify;
+        }
+        .mar{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body id="tbody">
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+
+    
+      <h5 class="mar">  Our Misson:</h5>
+      <p class="para">
+At Fashion Hunt, our mission is to empower individuals to express their unique style and personality through fashion. We believe that fashion is more than just clothing; it's a form of self-expression and confidence. Our platform is designed to inspire and assist our customers in curating their perfect looks, regardless of age, gender, or body type. We're here to celebrate diversity and embrace inclusivity in the world of fashion.
+</p>
+
+<h5>What We Offer:</h5>
+<p class="para">
+<h6>1.Curated Collections:</h6>
+    Our team of fashion experts scours the fashion world to handpick the most stylish and on-trend pieces, ensuring that you have access to the best choices available.
+</p>
+
+<h6>Wide Range of Brands:</h6>
+<p class="para">
+     Fashion Hunt collaborates with both established and emerging fashion brands, giving you a diverse selection of options to choose from. Whether you prefer luxury labels or affordable finds, we have something for everyone.
+    </p>
+   
+<h6>Fashion Inspiration:</h6>
+<p class="para">
+Browse through our Lookbooks and Style Guides to get inspired and discover fresh ideas for creating your own signature looks. We believe that fashion should be fun and experimental!
+</p>
+
+<h6>User-friendly Interface:</h6>
+<p class="para">
+     Our website is designed to provide a seamless and enjoyable shopping experience. Easily navigate through categories, filter by preferences, and find exactly what you're looking for with ease.
+    </p>
+   
+<h6>Fashion Blog:</h6>
+<p class="para">
+     Stay updated with the latest fashion news, trends, and tips by reading our regularly updated fashion blog. We cover everything from seasonal fashion must-haves to styling advice for various occasions.
+    </p>
+<h6>Customer Satisfaction:</h6>
+<p class="para">
+Your satisfaction is our top priority. We strive to offer excellent customer service, prompt deliveries, and hassle-free returns, ensuring your shopping journey with Fashion Hunt is delightful from start to finish.
+</p>
+
+<h6>Community Engagement:</h6>
+<p class="para">
+     Fashion Hunt is not just a website; it's a fashion community. Join our social media platforms to connect with other fashion enthusiasts, share your looks, and be a part of the ever-evolving fashion conversation.
+</p>
+
+<h6>Sustainability: </h6>
+<p class="para">
+    We acknowledge our responsibility towards the environment and promote sustainable fashion choices. Look for our curated sustainable collections, featuring eco-friendly and ethically made products.
+</p>
+<p class="para">
+Join us on this exciting fashion journey and let Fashion Hunt be your 
+go-to destination for all your fashion needs. Whether you're searching 
+for that perfect outfit, seeking style advice, or simply exploring the 
+latest trends, we're here to make your fashion dreams come true.
+    </p>
+</div>
+    <div class="col">
+      <img src="{% static 'images/ab4.jpg' %}" width="100%" >
+      <img src="{% static 'images/ab2.jpg' %}" width="100%" >
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show categories</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+     #tbody{
+      /* background: url("/static/images/ba.jpg"); */
+      background-color: aquamarine;
+     }
+     form{
+       width: 50%;
+       margin: auto;
+     }
+     th{
+       text-align: center;
+     }
+    td{
+      text-align: center;
+    }
+   </style>
+</head>
+<body id="tbody">
+   
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <td><b>CId</b></td>
+                <td><b>CName</b></td>
+                <td><b>Image</b></td>
+         </tr>
+          </thead>
+          <tbody>
+          {% for k in sk %}
+          <tr>
+           <td>{{k.cid}}</td>
+           <td>{{k.cname}}</td>
+           <td>
+             <img src="{{k.image.url}}" height="300px" width="250px" >
+           </td>
+          </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+    </form>
+
+</body>
+</html>
+
+{% endblock %}

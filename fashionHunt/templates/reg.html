@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>my website</title>
+	
+  <link rel="stylesheet" href="{% static 'reg.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+<div class="wrapper">
+<div class="container-fluid">
+	<h2>Registration Form</h2>
+	<div class="form-container">
+		<form action="{% url 'regTask' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+		<div class="input-name">
+		<i class="fa fa-address-book lock"></i>
+         <input type="text" placeholder="Your Name" required class="text-name" name="name">
+     </div>
+    <div class="input-name">
+    	<i class="fa fa-envelope email"></i>
+    	<input type="email" placeholder="Email" required class="text-name" name="email" >
+    </div>
+
+    <div class="input-name">
+    	<i class='fa fa-lock email'></i>
+    	<input type="password" placeholder="Password" required class="text-name" name="pass1">
+    </div>
+
+    <div class="input-name">
+    	<i class='fa fa-lock email'></i>
+    	<input type="password" placeholder="Confirm Password" required class="text-name" name="pass2">
+    </div>
+
+    <div class="input-name">
+    	<i class="fa fa-mobile email"></i>
+    	<input type="text" placeholder="Mobile" required="" class="text-name" name="mobile">
+	</div>
+    
+    <div class="input-name">
+        <i class="fa fa-address-card email"></i>
+    	<input type="address" placeholder="Enter your address" required="" name="address" class="text-name">
+    </div>
+    <div class="input-name">
+		<label for="image">Image</label> <br>
+    	<input type="file" name="fimg" class="text-name">
+    </div>
+    <div class="input-name">
+    	<input type="submit" class="button" value="Register" class="text-name">	
+    </div>
+	
+	<div class="input-name">
+		<label>Already have an account?</label>
+		 <a href="{% url 'loginpage' %}"> Login</a>
+	</div>
+	</form>
+</div>	
+	</div>	
+</div>
+
+</body>
+</html>
+
+{% endblock %}

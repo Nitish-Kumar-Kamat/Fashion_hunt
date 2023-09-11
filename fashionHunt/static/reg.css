@@ -1,0 +1,115 @@
+*
+{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+	background: url("/static/images/ba.jpg");
+	background-size: cover;
+}
+.wrapper
+{
+	background: white;
+	width: 500px;
+	padding: 25px;
+	margin: 50px auto 0;
+	border-top: 5px solid blue;
+	box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper h2
+{
+	font-size: 24px;
+	line-height: 24px;
+	padding: 30px;
+	text-align: center;
+}
+.input-name
+{
+	width: 90%;
+	position: relative;
+	margin: 20px auto;
+}
+
+.lock{
+	padding: 8px 11px;
+}
+.name{
+	width: 45%;
+	padding: 8px 0px 8px 40px;
+}
+.input-name span
+{
+	margin-left: 35px;
+}
+.text-name
+{
+	width: 100%;
+	padding: 7px 0px 8px 40px;
+}
+.input-name i{
+	position: absolute;
+	font-size: 18px;
+	color: blue;
+	border-right: 1px solid #cccccc;
+}
+.email
+{
+	padding: 8px;
+}
+.text-name, .name
+{
+   border: 1px solid #cccccc;
+   outline: none;
+   -webkit-transition: all 0.30s ease-in-out;
+   -moz-transition: all 0.30s ease-in-out;
+   -ms-transition: all 0.30s ease-in-out;
+   transition: all 0.30s ease-in-out;
+}
+.text-name:hover, .name:hover
+{
+	background-color: #fafafa	;
+}
+
+.text-name:focus, .name:focus
+{
+	border: 1px solid blue;
+}
+.radio-button
+{
+	margin-right:8px;
+}
+.calender
+{
+	width: 100%;
+}
+.button{
+	background-color: blue;
+	color: white;
+	height: 35px;
+	line-height: 35px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+}
+.button:hover
+{
+	background-color:green;
+}
+
+label{
+	font-size: 16px;
+    position: relative;
+}
+a{
+	font-size: 16px;
+	color: blue;
+}
+a:hover
+{
+	color: green;
+}

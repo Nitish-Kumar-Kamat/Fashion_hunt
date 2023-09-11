@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link rel="stylesheet" href="{% static 'audition.css' %}">
+
+</head>
+<body>
+  <div class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            FashionHunt
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white" href="{% url 'audireg' %}">Audition Registration</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" href="{% url 'home' %}">Logout</a>
+              </li>
+              </ul>
+          </div>
+          <form action="" method="POST">
+            {% csrf_token %}
+            {% for k in rec %}
+          <a class="nav-link active text-white" href="#">Welcome, {{k.name}}</a>
+          {% endfor %}
+        </div>
+      </nav>
+</div>
+
+        
+            <table class="table table-dark table-striped"> 
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>Image</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for k in rec %}
+              <tr>
+               <td>{{k.id}}</td>
+               <td>{{k.name}}</td>
+               <td>{{k.email}}</td>
+               <td>{{k.mobile}}</td>
+               <td>{{k.address}}</td>
+               <td>
+                 <img src="{{k.image.url}}" height="300px" width="400px" >
+               </td>
+            </tr>
+              {% endfor %}
+            </tbody>
+            </table> 
+        </form>
+    
+    {% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show categories</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+     #tbody{
+      /* background: url("/static/images/ba.jpg"); */
+      background-color:aquamarine;
+     }
+     form{
+       width: 50%;
+       margin: auto;
+     }
+     th{
+       text-align: center;
+     }
+    td{
+      text-align: center;
+    }
+   </style>
+</head>
+<body id="tbody">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h2 class="h1-responsive font-weight-bold text-center my-4 text-primary text-decoration-underline">
+        Winner Lists
+      </h2>
+       
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <td><b>Sr No.</b></td>
+                <td><b>Contestant Name</b></td>
+                <td><b>Type</b></td>
+                <td><b>Team</b></td>
+                <td><b>Status</b></td>
+                <td><b>Prize Money</b></td>
+         </tr>
+          </thead>
+          <tbody>
+          {% for i in data %}
+          <tr>
+           <td>{{i.sno}}</td>
+           <td>{{i.cname}}</td>
+           <td>{{i.type}}</td>
+           <td>{{i.team}}</td>
+           <td>{{i.status}}</td>
+           <td>{{i.prize}}</td>  
+          </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+    </form>
+
+</body>
+</html>
+
+{% endblock %}

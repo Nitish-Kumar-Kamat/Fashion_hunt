@@ -1,0 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+	background-size: cover;
+}
+.wrapper{
+    margin: 20px;
+    padding: 20px;
+}
+img{
+    padding: 40px;
+}
