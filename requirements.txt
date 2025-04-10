@@ -9,7 +9,7 @@ charset-normalizer==2.0.7
 cmake==3.21.4
 cssselect2==0.7.0
 distlib==0.3.6
-Django==4.0.5
+Django==4.2
 django-cors-headers==4.2.0
 django-renderpdf==3.0.1
 djangorestframework==3.14.0
@@ -18,8 +18,8 @@ fonttools==4.38.0
 html5lib==1.1
 idna==3.3
 mysql-connector==2.2.9
-mysql-connector-python==8.0.28
-numpy==1.21.4
+mysql-connector-python==8.0.29
+numpy>=1.24.0
 opencv-python==4.5.4.58
 Pillow==9.4.0
 protobuf==3.20.0
@@ -40,3 +40,7 @@ weasyprint==57.2
 webencodings==0.5.1
 wikipedia==1.4.0
 zopfli==0.2.2
+gunicorn
+pandas
+setuptools
+wheel
